@@ -5,6 +5,7 @@ static struct Terra* percorso = NULL;
 
 static struct Terra* ultima_terra = NULL;
 
+//con static al posto di extern mi dice come se non fosse dichiarato 
 extern struct Oberon oberon;
 
 
