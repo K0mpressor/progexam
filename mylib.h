@@ -1,3 +1,19 @@
+typedef enum tipoTerra {
+  deserto = 1; // Si parte da 0 o da 1... mah..
+  foresta;
+  palude;
+  villaggio;
+  pianura;
+} eTipoTerra;
+
+typedef struct tipoMostro {
+  nessuno = 1;
+  scheletro;
+  lupo;
+  orco;
+  drago;
+} eTipoMostro
+
 typedef struct oberon {
   unsigned short borsa_oro;
   unsigned short punti_ferita;
@@ -6,8 +22,8 @@ typedef struct oberon {
 } sOberon;
 
 typedef struct terra {
-  enum tipo_terra {deserto, foresta, palude, villaggio, pianura} eTipo_terra;
-  enum tipo_mostro {nessuno, scheletro, lupo, orco, drago} eTipo_mostro;
+  eTipoTerra tipoTerra;
+  eTipoMostro tipoMostro;
   unsigned short tesoro;
   terra *terra_successiva;
 } sTerra;
