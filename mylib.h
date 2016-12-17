@@ -1,32 +1,41 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
 typedef enum tipoTerra {
-  deserto = 1; // Si parte da 0 o da 1... mah..
-  foresta;
-  palude;
-  villaggio;
-  pianura;
+	deserto = 1,
+	foresta,
+	palude,
+	villaggio,
+	pianura
 } eTipoTerra;
 
-typedef struct tipoMostro {
-  nessuno = 1;
-  scheletro;
-  lupo;
-  orco;
-  drago;
-} eTipoMostro
+typedef enum tipoMostro {
+	nessuno = 1,
+	scheletro,
+	lupo,
+	orco,
+	drago
+} eTipoMostro;
 
 typedef struct oberon {
-  unsigned short borsa_oro;
-  unsigned short punti_ferita;
-  unsigned short incantesimi;
-  unsigned short pozione_guaritrice; 
+	unsigned short borsaOro;
+	unsigned short puntiFerita;
+	unsigned short incantesimi;
+	unsigned short pozioneGuaritrice;
 } sOberon;
 
 typedef struct terra {
-  eTipoTerra tipoTerra;
-  eTipoMostro tipoMostro;
-  unsigned short tesoro;
-  terra *terra_successiva;
+	eTipoTerra tipoTerra;
+	eTipoMostro tipoMostro;
+	unsigned short tesoro;
+	/*sTerra *terraSuccessiva;*/
 } sTerra;
 
-void crea_percorso();
+void creaPercorso();
 
+void muoviOberon();
+
+void terminaGioco();
+
+void illegalChoice();
