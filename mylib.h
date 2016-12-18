@@ -14,7 +14,7 @@ typedef enum tipo_terra{
 	palude, 
 	villaggio, 
 	pianura
-} Tipo_terra;
+} eTipo_terra;
 
 typedef enum tipo_mostro{
 	nessuno=1, 
@@ -22,23 +22,21 @@ typedef enum tipo_mostro{
 	lupo, 
 	orco, 
 	drago
-} Tipo_mostro;
+} eTipo_mostro;
 
-typedef struct oberon{
+struct sOberon{
 	short borsa_oro;
 	short punti_ferita;
 	short incantesimi;
 	short pozione_guaritrice;
-} Oberon;
+};
 
-struct Terra{
-	Tipo_terra tipo_terra;
-	Tipo_mostro tipo_mostro;
+struct sTerra{
+	eTipo_terra tipo_terra;
+	eTipo_mostro tipo_mostro;
 	short tesoro;
-	struct Terra* terra_successiva;
+	struct sTerra* terra_successiva;
 };
 
 //Variabile globale che esce dal menu crea_percorso e ritorna a progexam
 short int checkExit;
-
-
